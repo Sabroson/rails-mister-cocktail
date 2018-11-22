@@ -13,9 +13,7 @@
       <div class="control">
         <div class="select is-primary">
           <%= f.select :ingredient_id do %>
-            <% @ingredients.each do |ingredient| %>
-              <%= content_tag(:option, ingredient.name, value: ingredient.id) %>
-            <% end %>
+            <%= options_from_collection_for_select(@ingredients, :id, :name) %>
           <% end %>
         </div>
       </div>
