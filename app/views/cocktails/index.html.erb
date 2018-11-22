@@ -1,0 +1,27 @@
+<h1 class="title">Cocktails</h1>
+
+<div class="columns">
+  <% @cocktails.each do |cocktail| %>
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <%= cocktail.name %>
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          Created at:
+          <br>
+          <time datetime="2016-1-1"><%= cocktail.created_at %></time>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <%= link_to 'Show', cocktail_path(cocktail), class: 'card-footer-item'  %>
+        <a href="#" class="card-footer-item">Edit</a>
+        <a href="#" class="card-footer-item">Delete</a>
+      </footer>
+    </div>
+  </div>
+  <% end %>
+</div>

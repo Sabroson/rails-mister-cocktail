@@ -1,0 +1,23 @@
+<h1 class="title"><%= @cocktail.name %></h1>
+
+
+
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>Amount:</th>
+      <th>Ingredient:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cocktail.doses.each do |dose| %>
+    <tr>
+      <th><%= dose.description %></th>
+      <th><%= dose.ingredient.name %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Add dose',  new_cocktail_dose_path(@cocktail), class: 'button is-primary'%>

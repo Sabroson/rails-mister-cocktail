@@ -1,0 +1,26 @@
+<div class="columns">
+  <div class="column is-half is-offset-one-quarter">
+  <h1 class="title">Add a dose to <%= @cocktail.name %></h1>
+  <%= form_for([@cocktail, @dose]) do |f| %>
+    <div class="field">
+      <label class="label"><%= f.label :description, class: 'label' %></label>
+      <div class="control">
+        <%= f.text_field :description, class: 'input' %>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label"><%= f.label :ingredient_id, class: 'label' %></label>
+      <div class="control">
+        <div class="select is-primary">
+          <%= f.select :ingredient_id do %>
+            <% @ingredients.each do |ingredient| %>
+              <%= content_tag(:option, ingredient.name, value: ingredient.id) %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit class: 'button is-primary' %>
+  <% end %>
+  </div>
+</div>
