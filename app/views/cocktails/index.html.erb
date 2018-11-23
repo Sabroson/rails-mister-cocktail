@@ -2,24 +2,13 @@
 
 <div class="columns is-multiline">
   <% @cocktails.each do |cocktail| %>
+
   <div class="column is-one-quarter">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          <%= cocktail.name %>
-        </p>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          <time datetime="2016-1-1"><%= cocktail.created_at.strftime('Created on: %d/%m/%Y') %></time>
-        </div>
-      </div>
-      <footer class="card-footer">
-        <%= link_to 'Show', cocktail_path(cocktail), class: 'card-footer-item'  %>
-        <a href="#" class="card-footer-item">Edit</a>
-        <a href="#" class="card-footer-item">Delete</a>
-      </footer>
+    <%= link_to cocktail_path(cocktail) do%>
+    <div class="dan-card" style="background-image: url('<%= cocktail.photo.to_s  %>');">
+      <h2 class="dan-card-title is-size-3 has-text-dark has-text-weight-bold"><%= cocktail.name %></h2>
     </div>
+    <% end %>
   </div>
   <% end %>
 </div>

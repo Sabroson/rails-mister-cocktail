@@ -8,7 +8,28 @@
         <%= f.text_field :name, class: 'input' %>
       </div>
     </div>
-  <%= f.submit class: 'button is-primary' %>
+    <div class="field">
+      <div class="file has-name">
+        <label class="file-label">
+          <%= f.file_field :photo, class: 'file-input' %>
+          <%= f.hidden_field :photo_cache, as: :hidden %>
+          <span class="file-cta">
+            <span class="file-icon">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span class="file-label">
+              Add a picture…
+            </span>
+          </span>
+          <span class="file-name">
+            no image selected
+          </span>
+        </label>
+      </div>
+    </div>
+    <div class="field">
+      <%= f.submit class: 'button is-primary' %>
+    </div>
   <% end %>
   </div>
 </div>

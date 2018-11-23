@@ -1,0 +1,13 @@
+.dan-card {
+  background-size: cover;
+  padding: 5px;
+  position: relative;
+  height: 350px;
+  margin: 0 10px;
+
+  .dan-card-title {
+    left: 20px;
+    bottom: 20px;
+    position: absolute;
+  }
+}
