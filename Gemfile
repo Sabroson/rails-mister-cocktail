@@ -41,8 +41,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # my gems
 gem 'autoprefixer-rails'
 gem 'bulma-rails', '~> 0.7.2'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
