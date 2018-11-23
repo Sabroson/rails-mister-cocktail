@@ -5,7 +5,7 @@
 
   <div class="column is-one-quarter">
     <%= link_to cocktail_path(cocktail) do%>
-    <div class="dan-card" style="background-image: url('<%= cocktail.photo.to_s  %>');">
+    <div class="dan-card" style="background-image: url('<%= cl_image_path(cocktail.photo, :height => 350, :crop => :fill, :secure=>true)  %>');">
       <h2 class="dan-card-title is-size-3 has-text-dark has-text-weight-bold"><%= cocktail.name %></h2>
     </div>
     <% end %>
