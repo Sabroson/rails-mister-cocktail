@@ -1,5 +1,11 @@
 <h1 class="title"><%= @cocktail.name %></h1>
 
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><%= link_to 'all cocktails', cocktails_path  %></li>
+    <li class="is-active"><a href="#" aria-current="page"><%= @cocktail.name %></a></li>
+  </ul>
+</nav>
 
 
 <table class="table is-striped">
